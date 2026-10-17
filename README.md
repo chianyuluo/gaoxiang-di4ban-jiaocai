@@ -57,6 +57,7 @@ npx skills add chianyuluo/gaoxiang-di4ban-jiaocai
 SKILL.md                  主入口（框架 + 路由 + 常见坑）
 INDEX.md                  技能地图与触发速查
 coaches/                  11 个教练模块（六段式：R/I/A1/A2/E/B）
+coaches/tests/            3 个核心教练的压力测试用例
 chapters/ch01~ch24.md     24 章知识框架
 cheatsheet.md             公式、过程数、决策规则
 glossary.md               核心术语
@@ -122,4 +123,4 @@ examples/                 3 个"输入→输出"示例
 
 ## 更新日志
 
-见 [CHANGELOG.md](CHANGELOG.md)。当前版本 **v0.3.0**（2026-10-17）：11 个教练升级为完整版（完整算例 + 反例库 + 5 层追问 + 使用示例），新增核心教练压力测试用例。
+见 [CHANGELOG.md](CHANGELOG.md)。当前版本 **v0.3.1**（2026-10-17）：修正 12 条原则、整理测试用例目录、修复 License 识别。
