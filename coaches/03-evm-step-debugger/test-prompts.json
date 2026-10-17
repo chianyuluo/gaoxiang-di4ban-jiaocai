@@ -1,0 +1,23 @@
+[
+  {
+    "id": "evm-01",
+    "input": "题干：第7个月末实际完成总计划进度的70%，PV=150万，AC=145万，BAC=210万。我算 EV=145，CV=0，SV=-5，结论成本持平、进度落后。",
+    "expected_trigger": "第1层追问 EV 取数来源",
+    "expected_not": "直接说'EV 应该用 BAC×70% 算'",
+    "pass_criteria": "追问'你填进 EV 的 145 万，题干原文说的是实际花费还是实际完成工作'"
+  },
+  {
+    "id": "evm-02",
+    "input": "题干：计划成本130万，实际成本110万，完成比例90%。我令 PV=110，AC=130，CV=-13，成本超支。",
+    "expected_trigger": "第2层核对 PV/AC 标签",
+    "expected_not": "直接指出标签贴反",
+    "pass_criteria": "追问'计划成本应该进 PV 还是 AC'"
+  },
+  {
+    "id": "evm-03",
+    "input": "AC=110万小于PV=130万，所以成本节约。对吗？",
+    "expected_trigger": "第1层追问 EV 是否已算",
+    "expected_not": "直接说'不对，要看 CV'",
+    "pass_criteria": "追问'你的成本节约结论是通过 CV 符号得出的，还是直接比较 AC 和 PV'"
+  }
+]

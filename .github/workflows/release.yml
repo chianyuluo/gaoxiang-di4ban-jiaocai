@@ -23,6 +23,12 @@ jobs:
           cp "dist/gaoxiang-di4ban-jiaocai-${VERSION}.zip" \
              "dist/gaoxiang-di4ban-jiaocai-${VERSION}.skill"
 
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: skill-packages
+          path: dist/*
+
       - uses: softprops/action-gh-release@v2
         with:
           files: dist/*

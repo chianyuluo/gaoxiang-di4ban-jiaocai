@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cpm-01",
+    "input": "D 的紧前是 B 和 C，EF_B=7，EF_C=5，我令 D 的 ES=5，EF=10。",
+    "expected_trigger": "第1层正向取大检查",
+    "expected_not": "直接说 ES 应该取 7",
+    "pass_criteria": "追问'D 要开始是只需一个紧前完成还是都要完成，ES 取大还是取小'"
+  },
+  {
+    "id": "cpm-02",
+    "input": "A 的紧后是 B 和 C，LS_B=3，LS_C=5，我令 A 的 LF=5，LS=2。",
+    "expected_trigger": "第2层反向取小检查",
+    "expected_not": "直接说 LF 应该取 3",
+    "pass_criteria": "追问'A 最晚何时完成才不拖累 B 和 C，取较早还是较晚'"
+  },
+  {
+    "id": "cpm-03",
+    "input": "题目问 C 的总时差，我用'紧后最早开始最小值 − C 的 EF'算得 2。",
+    "expected_trigger": "第3层时差概念核对",
+    "expected_not": "直接说这是自由时差公式",
+    "pass_criteria": "追问'题目问的是总时差还是自由时差，你用的公式对应哪个概念'"
+  }
+]

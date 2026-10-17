@@ -2,6 +2,15 @@
 
 > 这不是章节清单，是**使用顺序**。先建立框架，再练计算，再练案例，最后攻论文；贯穿性模块负责节奏与复盘。
 
+## 〇、三科 × 教练对应
+
+| 科目 | 主要教练 |
+|---|---|
+| 综合知识 | `01-itto-framework-coach`、`02-mcq-diagnoser` |
+| 案例分析 | `03-evm-step-debugger`、`04-cpm-reverse-checker`、`05-case-finding-coach` |
+| 论文 | `06-essay-material-builder`、`07-essay-framework-diagnoser`、`08-essay-anti-template` |
+| 贯穿全程 | `09-study-route-planner`、`10-daily-drill-scheduler`、`11-mistake-attribution-log` |
+
 ## 一、推荐使用顺序
 
 1. **先建框架**：用 `01-itto-framework-coach` 把十大管理的过程链和 8 个绩效域串起来。
@@ -45,7 +54,19 @@
 节奏：09（阶段）→ 10（每日）→ 11（每周复盘）
 ```
 
-## 四、边界
+## 四、教练联动
+
+```
+综合知识错题 ──→ 02-mcq-diagnoser ──→ ITTO 薄弱 ──→ 01-itto-framework-coach
+案例计算错误 ──→ 03-evm / 04-cpm
+             └──→ 步骤系统性缺失 ──→ 05-case-finding-coach
+论文诊断 ──→ 07-essay-framework-diagnoser / 08-essay-anti-template
+         └──→ 素材不足 ──→ 06-essay-material-builder
+所有训练记录 ──→ 11-mistake-attribution-log ──→ 09-study-route-planner 调路线
+                                            └──→ 10-daily-drill-scheduler 调任务
+```
+
+## 五、边界
 
 - 本 Pack 是**训练与诊断**，不是教材全文；知识框架在 `chapters/`。
 - 不代写论文、不直接给计算答案、不押题。
