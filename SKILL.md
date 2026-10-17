@@ -1,6 +1,6 @@
 ---
 name: gaoxiang-di4ban-jiaocai
-description: "高项（信息系统项目管理师）第4版教程框架型备考知识库。覆盖十大管理 ITTO、8个绩效域、项目管理科学基础（计算）、案例找错与论文写法。用于备考答疑、梳理框架、生成练习题与考点讲义、核对第4版术语与命题趋势。"
+description: "高项（信息系统项目管理师）第4版备考 Skill Pack：24章框架 + 11个教练。覆盖十大管理 ITTO、8个绩效域、挣值/关键路径计算、案例找茬、论文三件套、备考路线与错题归因。当考生问'ITTO/挣值算不对/关键路径不一致/案例不知道找什么/论文没项目/每天只有1小时/总是同类错'时使用；用于备考答疑、框架梳理、出题与术语核对。"
 ---
 
 <!-- argument-hint: 进度管理 / 绩效域 / 挣值 / 论文 / 案例找错 / 十大管理 / 变更 -->
@@ -14,8 +14,32 @@ description: "高项（信息系统项目管理师）第4版教程框架型备�
 - **带主题** — 说「挣值」「绩效域」「变更流程」等，我定位并读取对应章节
 - **带章号** — 说「ch10」，我加载该章文件
 - **浏览** — 问「有哪些章节」，看完整索引
+- **找教练** — 说「挣值算不对」「案例不知道找什么」「论文没项目」「每天只有1小时」，我加载 `coaches/` 对应模块（不直接给答案，先追问）
+- **看技能地图** — 问「怎么用这套 skill」，我读取 `INDEX.md`
 
 > 注意：本 skill 是**框架/原则/技法/反模式层**，不是教材全文。需要逐句原文时，底层 clean 正文在 `D:\WorkBuddy\Claw\高项教材知识库\`（24 章 markdown），本 skill 每条都标注了对应章号，可直接回查。
+
+---
+
+## 教练系统（Coaches · 六段式 R/I/A1/A2/E/B）
+
+> 知识库回答"是什么"，教练回答"你卡在哪、怎么练"。默认**不直接给答案**，先用分层追问暴露空缺。
+
+| 触发 | 教练模块 |
+|---|---|
+| ITTO / 输入输出 / 哪个过程组 | [01-itto-framework-coach](coaches/01-itto-framework-coach.md) |
+| 错题 / 选了A答案是C | [02-mcq-diagnoser](coaches/02-mcq-diagnoser.md) |
+| CV/CPI/EAC/ETC 算不对 | [03-evm-step-debugger](coaches/03-evm-step-debugger.md) |
+| 关键路径 / 总浮动 / 自由浮动 | [04-cpm-reverse-checker](coaches/04-cpm-reverse-checker.md) |
+| 案例不知道从哪找问题 | [05-case-finding-coach](coaches/05-case-finding-coach.md) |
+| 论文没项目 / 素材怎么攒 | [06-essay-material-builder](coaches/06-essay-material-builder.md) |
+| 论文偏题 / 深度不够 / 结构失衡 | [07-essay-framework-diagnoser](coaches/07-essay-framework-diagnoser.md) |
+| 担心被判套作 / 模板化 | [08-essay-anti-template](coaches/08-essay-anti-template.md) |
+| 每天1小时 / 还有X个月 | [09-study-route-planner](coaches/09-study-route-planner.md) |
+| 每天练一点 / 今天练什么 | [10-daily-drill-scheduler](coaches/10-daily-drill-scheduler.md) |
+| 总是同类错 / 错题怎么总结 | [11-mistake-attribution-log](coaches/11-mistake-attribution-log.md) |
+
+**编排原则**：先判"是知识问题还是训练问题"——问定义/框架 → 查 `chapters/`；问"我为什么错/怎么练" → 进教练。教练只做追问与纠错，不代写、不代算、不押题。
 
 ---
 
@@ -87,14 +111,30 @@ description: "高项（信息系统项目管理师）第4版教程框架型备�
 - **案例找错** → patterns
 - **计算（EMV/线性规划/博弈/指派）** → ch21
 
+## 常见坑（Gotchas · 最高信号）
+
+1. **进度管理只有 6 个过程**：估算活动资源归第 13 章资源管理，别算进进度。
+2. **管理质量 ≠ 控制质量**：前者管过程（审计、设计评审），后者管结果（测试、抽检）。
+3. **三类绩效别混**：工作绩效数据（原始）→ 工作绩效信息（对比基准）→ 工作绩效报告（汇总）。
+4. **典型/非典型**：题目没说"剩余按原计划"，一律按典型偏差（EAC=BAC/CPI）。
+5. **第4版旧词陷阱**：风险监控→**监督风险**；建设项目团队→**建设团队**；交互式沟通→**互动沟通**；人力资源计划→**资源管理计划**；实施质量保证→**管理质量**。
+6. **论文不写摘要**，≤3500 字，必须有真实项目与量化成效。
+7. **变更不由发起人直接改**：任何变更都要书面请求 → CCB 审批 → 更新基准 → 通知干系人。
+8. **配置三库**：开发库 / 受控库 / 产品库；基线产品入受控库。
+
 ## Supporting Files
 
+- [INDEX.md](INDEX.md) — 技能地图、使用顺序与触发速查
+- [coaches/](coaches/) — 11 个教练模块（六段式 R/I/A1/A2/E/B）
+- [examples/](examples/) — 3 个"输入→输出"示例（ITTO / 案例 / 论文）
 - [glossary.md](glossary.md) — 核心术语与定义（标注章号）
 - [patterns.md](patterns.md) — 案例找错反模式、论文高分技法、计算提速套路
 - [cheatsheet.md](cheatsheet.md) — 公式速查、过程清单、决策规则
+- [CHANGELOG.md](CHANGELOG.md) — 版本更新记录
+- [LICENSE](LICENSE) — CC BY-NC-SA 4.0
 
 ---
 
 ## Scope & Limits
 
-覆盖高项第4版教程 24 章框架内容，面向 2027 上半年（5月）备考。不含系规/中项内容，不含实时考情公告（以软考办官方为准）。底层逐句原文见 `D:\WorkBuddy\Claw\高项教材知识库\`。
+覆盖高项第4版教程 24 章框架内容 + 11 个教练模块，面向下一轮上半年（5 月）备考（2024 年起高项仅上半年开考）。不含系规/中项内容，不含实时考情公告（以软考办官方为准）。不代写论文、不代算整题、不押题。底层逐句原文见 `D:\WorkBuddy\Claw\高项教材知识库\`。
